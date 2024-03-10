@@ -8,11 +8,32 @@ using P = pair<int, int>;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
 
-    int ans = 0;
+    vector<int> Q(n), R(n);
 
-    cout << ans << endl;
+    rep(i, n)
+    {
+        cin >> Q[i];
+    }
+    rep(i, n)
+    {
+        cin >> R[i];
+    }
+
+    rep(i, n)
+    {
+        rep(j, n)
+        {
+            if (Q[i] + R[j] == k)
+            {
+                cout << "Yes" << endl;
+                return 0;
+            }
+        }
+    }
+
+    cout << "No" << endl;
     return 0;
 }

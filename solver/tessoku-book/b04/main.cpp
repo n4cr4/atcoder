@@ -8,10 +8,16 @@ using P = pair<int, int>;
 
 int main()
 {
-    int n;
+    string n;
     cin >> n;
-
     int ans = 0;
+
+    reverse(n.begin(), n.end());
+    rep(i, n.length())
+    {
+        int c = (1 << i);
+        ans += (n[i] - '0') * c;
+    }
 
     cout << ans << endl;
     return 0;

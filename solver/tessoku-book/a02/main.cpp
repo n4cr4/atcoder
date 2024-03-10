@@ -8,11 +8,24 @@ using P = pair<int, int>;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int n, x;
+    cin >> n >> x;
 
-    int ans = 0;
+    int a[100];
 
-    cout << ans << endl;
+    rep(i, n)
+    {
+        cin >> a[i];
+    }
+
+    rep(i, n)
+    {
+        if (a[i] == x)
+        {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    }
+    cout << "No" << endl;
     return 0;
 }

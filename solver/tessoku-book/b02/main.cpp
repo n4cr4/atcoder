@@ -2,17 +2,23 @@
 using namespace std;
 #include <atcoder/all>
 using namespace atcoder;
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+#define rep(i, s, n) for (int i = s; i < (int)(n); i++)
 using ll = long long;
 using P = pair<int, int>;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int A, B;
+    cin >> A >> B;
 
-    int ans = 0;
-
-    cout << ans << endl;
+    rep(i, A, B + 1)
+    {
+        if (100 % i == 0)
+        {
+            cout << "Yes" << endl;
+            return 0;
+        }
+    }
+    cout << "No" << endl;
     return 0;
 }

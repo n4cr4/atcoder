@@ -8,10 +8,10 @@ using P = pair<int, int>;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
-    int ans = 0;
+    int ans = n + m;
 
     cout << ans << endl;
     return 0;
