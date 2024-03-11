@@ -8,11 +8,31 @@ using P = pair<int, int>;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int n, q;
+    cin >> n >> q;
 
-    int ans = 0;
+    vector<int> A(n);
+    rep(i, n)
+    {
+        cin >> A[i];
+    }
 
-    cout << ans << endl;
+    vector<int> L(q), R(q);
+    rep(i, q)
+    {
+        cin >> L[i] >> R[i];
+    }
+
+    vector<int> S(n);
+    S[0] = A[0]; // S[0] = 0 として次のインデックスからやったほうが綺麗
+    for (int i = 1; i < n; i++)
+    {
+        S[i] = S[i - 1] + A[i];
+    }
+
+    rep(i, q)
+    {
+        cout << S[R[i] - 1] - S[L[i] - 2] << endl;
+    }
     return 0;
 }
