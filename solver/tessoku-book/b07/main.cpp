@@ -8,11 +8,28 @@ using P = pair<int, int>;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int T, N;
+    cin >> T >> N;
 
-    int ans = 0;
+    vector<int> A(T + 1, 0), S(T + 1, 0);
+    rep(i, N)
+    {
+        int L, R;
+        cin >> L >> R;
+        A[L] += 1;
+        A[R] -= 1;
+    }
 
-    cout << ans << endl;
+    S[0] = A[0];
+    for (int i = 1; i <= T; i++)
+    {
+        S[i] = A[i] + S[i - 1];
+    }
+
+    for (int i = 0; i < T; i++)
+    {
+        cout << S[i] << endl;
+    }
+
     return 0;
 }
