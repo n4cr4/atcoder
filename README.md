@@ -1,39 +1,38 @@
-# atcoder
-just for practicing and storing.
+# Atcoder
+Just for practicing and storing.
 
-## structure
+## Structure
+
 * ac-library
   * official library for atcoder.
-  * added by [submodule](https://https://github.com/atcoder/ac-library)
+  * added by [submodule](https://github.com/atcoder/ac-library)
 * solver
   * store answer program
-* template
-  * store temlate code for specific algorithm
-* .vscode
-  * you need `ms-vscode.cpptools`.
+* static
+  * store some configs
 
-## notes
-install `acc` and `oj`
+## Notes
+
+Install `acc` and `oj`.
 ```
 pip install online-judge-tools
 npm install -g atcoder-cli
 ```
 
-also, you need login
+Also, you need login.
 ```
 oj login https://atcoder.jp/
 acc login
 ```
 
-lastly, config `acc`
+Lastly, config `acc`.
 ```sh
 acc config default-template cpp
 acc config default-test-dirname-format test
 ```
 
-and make `cpp` directory.
-
-then, in that directory, set `main.cpp`(this will be template) and write it in `template.json`
+And make `cpp` directory.
+Then, in that directory, set `main.cpp`(this will be template) and write it in `template.json`
 ```json
 {
   "task": {
@@ -43,16 +42,23 @@ then, in that directory, set `main.cpp`(this will be template) and write it in `
 }
 ```
 
-## usage
+## Usage
+
+First, load config.
+
+```sh
+cd static
+source config.sh
+```
+
+Then, solve problem like below.
+
 ```sh
 cd solver
 acc new [contest_name]
 cd [contest_name]
-...
 # write answer in main.cpp
-# Ctrl+Shift+b for build executable file
-...
-oj t
-acc s
+cd a # problem string
+t # this will build and test program
+s # submit
 ```
-~~buildと`oj t`を一緒にやるスクリプトは用意していい気がする．~~
