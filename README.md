@@ -14,32 +14,30 @@ Just for practicing and storing.
 ## Notes
 
 Install `acc` and `oj`.
+
 ```
 pip install online-judge-tools
 npm install -g atcoder-cli
 ```
 
 Also, you need login.
+
 ```
 oj login https://atcoder.jp/
 acc login
 ```
 
 Lastly, config `acc`.
+
 ```sh
 acc config default-template cpp
 acc config default-test-dirname-format test
 ```
 
-And make `cpp` directory.
-Then, in that directory, set `main.cpp`(this will be template) and write it in `template.json`
-```json
-{
-  "task": {
-    "program": ["main.cpp"],
-    "submit": "main.cpp"
-  }
-}
+And make shim-link to `acc` directory.
+
+```sh
+ln -s ~/work/atcoder/static/cpp ~/.config/atcoder-cli-nodejs
 ```
 
 ## Usage

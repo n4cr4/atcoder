@@ -1,0 +1,11 @@
+{
+    "task": {
+        "program": [
+            "main.cpp"
+        ],
+        "submit": "main.cpp",
+        "static": [
+            "Makefile"
+        ]
+    }
+}
